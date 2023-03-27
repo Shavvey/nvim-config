@@ -1,0 +1,3 @@
+# ignore some files for nvim config
+*.DS_Store
+plugin/
