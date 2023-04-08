@@ -9,7 +9,8 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>sf", ":w<CR>")
 -- clear search highlights
 keymap.set("n", "<leader>hj", ":nohl<CR>")
-
+--quit out nvim
+keymap.set("n", "<leader>qq", ":qa<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
