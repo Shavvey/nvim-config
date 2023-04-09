@@ -19,13 +19,16 @@ null_ls.setup({
 		-- "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		--diagnostics.cpplint, --cpp files checker!
+		formatting.black, -- python formatter
+		diagnostics.cpplint, --cpp files checker!
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
 			end,
 		}),
+		formatting.clang_format, -- clangd formatter, not sure i like this
+		augroup = { formatting.prettier, formatting.stylua, formatting.black },
 	},
 	-- configure format on save, this is fucking awful
 	on_attach = function(current_client, bufnr)

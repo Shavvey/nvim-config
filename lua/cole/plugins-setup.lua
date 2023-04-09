@@ -104,6 +104,7 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- toggle term, popout window for quick terminal commands
 	use("akinsho/toggleterm.nvim")
 
 	if packer_bootstrap then
