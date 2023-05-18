@@ -14,6 +14,7 @@ end
 
 mason.setup()
 
+-- configure lsp config on autostart
 mason_lspconfig.setup({
 	ensure_installed = {
 		"tsserver",
@@ -24,6 +25,7 @@ mason_lspconfig.setup({
 		"clangd",
 		"pyright",
 		"rust_analyzer",
+    "html",
 	},
 })
 mason_null_ls.setup({

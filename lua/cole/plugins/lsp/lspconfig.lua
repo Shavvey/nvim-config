@@ -50,7 +50,6 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- Change the Diagnostic symbols in the sign column (gutter)
--- (not in youtube nvim video)
 local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
@@ -87,6 +86,8 @@ lspconfig["tailwindcss"].setup({
 -- configure clangd server
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
+	-- set offset encoding to uft-16 to play well with other lsps
+	capabilities.offsetEncoding == { "utf-16" },
 	on_attach = on_attach,
 	cmd = {
 		"clangd",
