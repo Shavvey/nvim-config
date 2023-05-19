@@ -30,14 +30,12 @@ end
 return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
-	use("folke/tokyonight.nvim")
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use({ "projekt0n/github-nvim-theme" })
-	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
-	use("navarasu/onedark.nvim")
+	--[[NOTE: disabling tmux navigator for now, since I don't really use it  ]]
+	-- use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
-	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
@@ -55,7 +53,14 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	-- trying to load the lazgit extension as well as have ensure dependecies (plenary and lazygit)
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
+		config = function()
+			require("telescope").load_extension("lazygit")
+		end,
+	}) -- fuzzy finder
 	use({ "nvim-telescope/telescope-ui-select.nvim" }) -- for showing lsp code actions
 
 	-- autocompletion
@@ -107,6 +112,8 @@ return packer.startup(function(use)
 	-- toggle term, popout window for quick terminal commands
 	use("akinsho/toggleterm.nvim")
 
+	-- git integration using lazygit
+	use("kdheepak/lazygit.nvim")
 	if packer_bootstrap then
 		require("packer").sync()
 	end

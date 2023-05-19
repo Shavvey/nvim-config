@@ -57,3 +57,5 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 -- toggle term keymap
 keymap.set("n", "<leader>nt", ":ToggleTerm<CR>")
+-- lazy git launch
+keymap.set("n", "<leader>gg", ":LazyGit<CR>")
