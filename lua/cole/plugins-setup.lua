@@ -110,9 +110,13 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	-- toggle term, popout window for quick terminal commands
-	use("akinsho/toggleterm.nvim")
-
-	-- git integration using lazygit
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	}) -- git integration using lazygit
 	use("kdheepak/lazygit.nvim")
 	if packer_bootstrap then
 		require("packer").sync()
