@@ -20,6 +20,7 @@ null_ls.setup({
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		formatting.black, -- python formatter
+		formatting.rustfmt, -- rust formatter
 		-- diagnostics.cpplint, --cpp files checker!
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
@@ -28,7 +29,7 @@ null_ls.setup({
 			end,
 		}),
 		formatting.clang_format, -- clangd formatter, not sure i like this
-		augroup = { formatting.prettier, formatting.stylua, formatting.black },
+		augroup = { formatting.prettier, formatting.stylua, formatting.black, formatting.rustfmt },
 	},
 	-- configure format on save, this is fucking awful
 	on_attach = function(current_client, bufnr)

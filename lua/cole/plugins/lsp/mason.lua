@@ -25,7 +25,7 @@ mason_lspconfig.setup({
 		"clangd",
 		"pyright",
 		"rust_analyzer",
-    "html",
+		"html",
 	},
 })
 mason_null_ls.setup({
@@ -36,5 +36,6 @@ mason_null_ls.setup({
 		"markdownlint",
 		"cpplint",
 		"yamlint",
+		"rustfmt",
 	},
 })
