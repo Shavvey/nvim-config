@@ -1,19 +1,18 @@
 --setting my leader key to be space
 vim.g.mapleader = " "
-
 local keymap = vim.keymap
 --==GENERAL KEYMAPS==
--- use jk to exit insert mode
-keymap.set("i", "jk", "<ESC>")
+--use jj to exit insert mode
+keymap.set("i", "jj", "<ESC>")
 --new keymap for filing saving, similar to what a have for emacs
 keymap.set("n", "<leader>fs", ":w<CR>")
 -- clear search highlights
 keymap.set("n", "<leader>hj", ":nohl<CR>")
 --quit out nvim
+--just forces a quit out of all currently open files inside nvim
 keymap.set("n", "<leader>qq", ":qa<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
-
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
@@ -32,7 +31,6 @@ keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tc", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-
 --==PLUGINS KEYMAPS==
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
@@ -57,5 +55,5 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 -- toggle term keymap
 keymap.set("n", "<leader>nt", ":ToggleTerm<CR>")
--- lazy git launch
+-- lazy git launch, silent call
 keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true })
