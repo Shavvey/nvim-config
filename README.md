@@ -5,7 +5,7 @@
 This is the general file structure for the nvim config
 
 ```
-└── cole
+└── main
 ├── core
 │   ├── colorscheme.lua
 │   ├── keymaps.lua
