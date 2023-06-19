@@ -34,7 +34,7 @@ This is the general file structure for the nvim config
 └── plugins-setup.lua
 ```
 
-After the top-level directory `cole`, the config is divided into two main sections:
+After the top-level directory `main`, the config is divided into two main sections:
 
 - `core`: contains main keymaps, defaults, and configured colorscheme.
 - `plugins`: contains all plugins and is further subdivided into `lsp`,
