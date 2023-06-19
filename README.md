@@ -1,5 +1,9 @@
 # Personal Neonvim Config
 
+Personal neovim configuration that I use right now.
+I lot of this stuff was pinched from another [repository](https://github.com/josean-dev/dev-environment-files),
+so you should probably just check that one out if you like this one
+
 ## File Structure
 
 This is the general file structure for the nvim config
