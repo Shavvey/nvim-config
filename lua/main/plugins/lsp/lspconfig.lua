@@ -15,8 +15,10 @@ local typescript_setup, typescript = pcall(require, "typescript")
 if not typescript_setup then
 	return
 end
+-- Snippets and (built-in) completions
 
-local keymap = vim.keymap -- for conciseness
+-- for conciseness
+local keymap = vim.keymap
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
