@@ -80,6 +80,13 @@ return packer.startup(function(use)
 		wants = { "nvim-treesitter" }, -- or require if not used so far
 		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
 	})
+	-- highlights todos
+	use({
+		"folke/todo-comments.nvim",
+		dependecies = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 	-- vs-code like icons
 	use("nvim-tree/nvim-web-devicons")
 	--polyglot syntax highlighting, should probably be disabled when running nvim-treesitter
