@@ -33,7 +33,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use({ "projekt0n/github-nvim-theme" })
-	--[[NOTE: disabling tmux navigator for now, since I don't really use it  ]]
+	--[[disabling tmux navigator for now, since I don't really use it  ]]
 	-- use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
@@ -83,9 +83,12 @@ return packer.startup(function(use)
 	-- highlights todos
 	use({
 		"folke/todo-comments.nvim",
-		dependecies = {
+		requires = {
 			"nvim-lua/plenary.nvim",
 		},
+		config = function()
+			require("todo-comments").setup()
+		end,
 	})
 	-- vs-code like icons
 	use("nvim-tree/nvim-web-devicons")
