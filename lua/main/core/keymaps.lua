@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 --==GENERAL KEYMAPS==
 --use jj to exit insert mode
-keymap.set("i", "jj", "<ESC>")
+keymap.set("i", "jk", "<ESC>")
 --new keymap for filing saving, similar to what a have for emacs
 keymap.set("n", "<leader>fs", ":w<CR>")
 -- clear search highlights
