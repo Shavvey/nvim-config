@@ -78,6 +78,7 @@ return packer.startup(function(use)
 				exclude = {}, -- tabout will ignore these filetypes
 			})
 		end,
+		-- require treesitter and use nvim completion plugin nvim-cmp for snippets and completion
 		wants = { "nvim-treesitter" }, -- or require if not used so far
 		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
 	})
@@ -99,6 +100,7 @@ return packer.startup(function(use)
 						alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
 						-- signs = false, -- configure signs for some keywords individually
 					},
+					-- icon and tags for various comments titles
 					TODO = { icon = " ", color = "info" },
 					HACK = { icon = " ", color = "warning" },
 					WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
