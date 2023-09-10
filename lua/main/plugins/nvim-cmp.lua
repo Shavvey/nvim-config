@@ -1,13 +1,14 @@
+-- protected call to load cmp safely
 local cmp_status, cmp = pcall(require, "cmp")
 if not cmp_status then
 	return
 end
-
+-- protected call to load luasnip safely
 local luasnip_status, luasnip = pcall(require, "luasnip")
 if not luasnip_status then
 	return
 end
-
+-- protected call to load lspkind safely
 local lspkind_status, lspkind = pcall(require, "lspkind")
 if not lspkind_status then
 	return
