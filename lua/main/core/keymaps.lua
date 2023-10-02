@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 -- storing this in a local var to be more concise
 local keymap = vim.keymap
 --==GENERAL KEYMAPS==
+-- removing horizontal scrolling by setting scroll right key to nothing
+-- invoking a simple vim command to accomplish this right now
+vim.cmd(":map <ScrollWheelRight> <Nop>")
 --use jj to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 --new keymap for filing saving, similar to what a have for emacs
