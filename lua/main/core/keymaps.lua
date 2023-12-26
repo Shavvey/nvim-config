@@ -12,6 +12,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>fs", ":w<CR>")
 -- clear search highlights
 keymap.set("n", "<leader>hj", ":nohl<CR>")
+keymap.set("n", "<leader>sp", ":set invspell")
 --quit out nvim
 --just forces a quit out of all currently open files inside nvim
 keymap.set("n", "<leader>qq", ":qa<CR>")
