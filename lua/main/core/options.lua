@@ -28,4 +28,4 @@ opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
 opt.spelllang = "en_us"
--- using :set invspell instead of always having this on
+-- using :set invspell instead of always having spell check on

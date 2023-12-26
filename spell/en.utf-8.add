@@ -79,3 +79,5 @@ hl
 guifg
 luasnip
 lspkind
+javascript
+autopairs
