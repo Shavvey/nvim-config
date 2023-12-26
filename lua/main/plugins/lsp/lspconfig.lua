@@ -20,17 +20,17 @@ end
 -- for conciseness
 local keymap = vim.keymap
 
--- enable keybinds only for when lsp server available
+-- enable keybindings only for when lsp server available
 local on_attach = function(client, bufnr)
-	-- keybind options
+	-- keybindings options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
-	-- set keybinds
+	-- set keybindings
 	keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 	keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- goto declaration
 	keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- go to implementation
-	keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- go to implementation
+	keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- go to type definition
 	keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
 	keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 	keymap.set("n", "<leader>rn", ":IncRename ", opts) -- smart rename
@@ -117,8 +117,8 @@ lspconfig["rust_analyzer"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
 -- configure rust_analyzer server
+
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
