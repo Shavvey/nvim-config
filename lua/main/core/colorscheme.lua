@@ -7,3 +7,7 @@ if not status then
 	-- print error if colorscheme not installed
 	return
 end
+-- load spelling mistakes preferences after colorscheme has loaded
+vim.cmd([[
+highlight SpellBad guisp=White gui=Underline
+]])

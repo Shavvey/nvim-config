@@ -38,7 +38,7 @@ return packer.startup(function(use)
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
-	-- mardown preview for nvim
+	-- markdown preview for nvim
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install",
@@ -65,7 +65,7 @@ return packer.startup(function(use)
 				default_tab = "<C-t>", -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
 				default_shift_tab = "<C-d>", -- reverse shift default action,
 				enable_backwards = true, -- well ...
-				completion = true, -- if the tabkey is used in a completion pum
+				completion = true, -- if the tabkey is used in a completion num
 				tabouts = {
 					{ open = "'", close = "'" },
 					{ open = '"', close = '"' },
@@ -75,7 +75,7 @@ return packer.startup(function(use)
 					{ open = "{", close = "}" },
 				},
 				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-				exclude = {}, -- tabout will ignore these filetypes
+				exclude = {}, -- tabout will ignore these file types
 			})
 		end,
 		-- require treesitter and use nvim completion plugin nvim-cmp for snippets and completion
@@ -118,7 +118,7 @@ return packer.startup(function(use)
 				-- * keyword: highlights of the keyword
 				-- * after: highlights after the keyword (todo text)
 				highlight = {
-					multiline = false, -- enable multine todo comments
+					multiline = false, -- enable multiline todo comments
 					multiline_pattern = "^.", -- lua pattern to match the next multiline from the start of the matched keyword
 					multiline_context = 10, -- extra lines that will be re-evaluated when changing a line
 					before = "", -- "fg" or "bg" or empty
@@ -159,7 +159,7 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-	-- trying to load the lazgit extension as well as have ensure dependecies (plenary and lazygit)
+	-- trying to load the lazgit extension as well as have ensure dependencies (plenary and lazygit)
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
@@ -179,7 +179,6 @@ return packer.startup(function(use)
 		"L3MON4D3/LuaSnip",
 		-- follow the latest release
 		tag = "v2.*",
-		-- install jsregexp
 		run = "make install_jsregexp",
 	}) -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
@@ -221,7 +220,7 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-	-- toggle term, popout window for quick terminal commands
+	-- toggle term, pop-out window for quick terminal commands
 	use({
 		"akinsho/toggleterm.nvim",
 		tag = "*",
