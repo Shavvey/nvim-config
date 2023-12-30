@@ -74,7 +74,6 @@ return packer.startup(function(use)
 					{ open = "(", close = ")" },
 					{ open = "[", close = "]" },
 					{ open = "{", close = "}" },
-					{ open = "<", close = ">" },
 				},
 				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
 				exclude = {}, -- tabout will ignore these file types
@@ -217,7 +216,7 @@ return packer.startup(function(use)
 
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
-	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags inside html, if we have treesitter enabled
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side

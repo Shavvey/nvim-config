@@ -31,7 +31,6 @@ treesitter.setup({
 		"css",
 		"markdown",
 		"markdown_inline",
-		"svelte",
 		"graphql",
 		"bash",
 		"lua",
@@ -40,7 +39,6 @@ treesitter.setup({
 		"gitignore",
 		"java",
 		"make",
-		"org",
 	},
 	-- auto install above language parsers
 	auto_install = true,
