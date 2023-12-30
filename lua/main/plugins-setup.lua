@@ -20,6 +20,7 @@ vim.cmd([[
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
   augroup end
 ]])
+
 -- import packer safely
 local status, packer = pcall(require, "packer")
 --try to import pack, if it fails do nothing!
@@ -73,6 +74,7 @@ return packer.startup(function(use)
 					{ open = "(", close = ")" },
 					{ open = "[", close = "]" },
 					{ open = "{", close = "}" },
+					{ open = "<", close = ">" },
 				},
 				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
 				exclude = {}, -- tabout will ignore these file types
