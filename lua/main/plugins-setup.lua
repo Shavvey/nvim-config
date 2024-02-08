@@ -48,8 +48,7 @@ return packer.startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
-
-	-- commenting with gc
+	-- commenting with gcc
 	use("numToStr/Comment.nvim")
 
 	-- file explorer

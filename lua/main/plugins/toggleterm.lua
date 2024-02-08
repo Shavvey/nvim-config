@@ -37,8 +37,9 @@ vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 -- creating terminal instance
 local Terminal = require("toggleterm.terminal").Terminal
+-- enables lazygit to run inside a new toggleterm instance
 local lazygit = Terminal:new({ cmd = "lazygit" }, { hidden = true })
-
+-- function to call toggle term directly
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
