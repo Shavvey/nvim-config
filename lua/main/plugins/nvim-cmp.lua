@@ -53,6 +53,7 @@ cmp.setup({
 	-- configure lspkind for vs-code like icons
 	formatting = {
 		format = lspkind.cmp_format({
+			-- max width of the pop up for lsp kind
 			maxwidth = 50,
 			ellipsis_char = "...",
 		}),
