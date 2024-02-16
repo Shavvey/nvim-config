@@ -2,6 +2,7 @@
 local opt = vim.opt --just trying to be concise ;)
 --line number
 opt.number = true
+opt.hlsearch = false
 --relative numbering for weirdos
 opt.relativenumber = true
 -- tabs & indentation
