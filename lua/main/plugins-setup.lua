@@ -11,7 +11,6 @@ local ensure_packer = function()
 	return false
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
-
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
 vim.cmd([[ 
@@ -29,7 +28,6 @@ if not status then
 end
 -- add list of plugins to install
 return packer.startup(function(use)
-	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
@@ -50,7 +48,6 @@ return packer.startup(function(use)
 	})
 	-- commenting with gcc
 	use("numToStr/Comment.nvim")
-
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
 	-- Lua
@@ -151,6 +148,7 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+
 	-- vs-code like icons
 	use("nvim-tree/nvim-web-devicons")
 	--polyglot syntax highlighting, should probably be disabled when running nvim-treesitter

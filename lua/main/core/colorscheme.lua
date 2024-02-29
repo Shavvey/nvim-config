@@ -11,3 +11,4 @@ end
 vim.cmd([[
 highlight SpellBad guisp=White gui=Underline
 ]])
+vim.o.guifont = "FiraCode Nerd Font Mono:h18"
