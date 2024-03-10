@@ -31,13 +31,11 @@ treesitter.setup({
 		"css",
 		"markdown",
 		"markdown_inline",
-		"graphql",
 		"bash",
 		"lua",
 		"vim",
 		"dockerfile",
 		"gitignore",
-		"java",
 		"make",
 	},
 	-- auto install above language parsers

@@ -23,17 +23,16 @@ null_ls.setup({
 		formatting.stylua, -- lua formatter
 		formatting.black, -- python formatter
 		formatting.rustfmt, -- rust formatter
+		formatting.clang_format, -- clangd formatter, not sure i like this
 		-- diagnostics.cpplint, --cpp files checker!
 		diagnostics.eslint_d.with({ -- js/ts linter
-			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
 			end,
 		}),
-		formatting.clang_format, -- clangd formatter, not sure i like this
 		augroup = { formatting.prettier, formatting.stylua, formatting.black, formatting.rustfmt },
 	},
-	-- configure format on save, this is fucking awful
+	-- configure format on save using the constructed augroup
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
