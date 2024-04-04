@@ -9,10 +9,8 @@ autopairs.setup({
 	ts_config = {
 		lua = { "string" }, -- don't add pairs in lua string treesitter nodes
 		javascript = { "template_string" }, -- don't add pairs in javascript template_string treesitter nodes
-		-- java = false, -- don't check treesitter on java
 	},
 })
-
 -- import nvim-autopairs completion functionality safely
 local cmp_autopairs_setup, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
 if not cmp_autopairs_setup then
