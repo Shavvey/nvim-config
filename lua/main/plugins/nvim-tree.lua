@@ -18,4 +18,11 @@ nvimtree.setup({
 	git = {
 		enable = true,
 	},
+	actions = {
+		open_file = {
+			window_picker = {
+				enable = false,
+			},
+		},
+	},
 })
