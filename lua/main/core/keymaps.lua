@@ -9,7 +9,7 @@ local keymap = vim.keymap
 --use jj to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 --new keymap for filing saving, similar to what a have for emacs
-keymap.set("n", "<leader>fs", ":w<CR>")
+keymap.set("n", "<leader>sf", ":w<CR>")
 -- clear search highlights
 keymap.set("n", "<leader>hj", ":nohl<CR>")
 keymap.set("n", "<leader>sp", ":set invspell<CR>")
@@ -45,7 +45,7 @@ keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
 keymap.set("n", "<leader>po", ":NvimTreeFindFile<CR>")
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>sf", "<cmd>Telescope live_grep<CR>") -- find string in current working directory as you type
+keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>") -- list available help tags
