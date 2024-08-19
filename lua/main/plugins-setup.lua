@@ -37,6 +37,22 @@ return packer.startup(function(use)
 	-- use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	require("nvim-ts-autotag").setup({
+		opts = {
+			-- Defaults
+			enable_close = true, -- Auto close tags
+			enable_rename = true, -- Auto rename pairs of tags
+			enable_close_on_slash = false, -- Auto close on trailing </
+		},
+		-- Also override individual filetype configs, these take priority.
+		-- Empty by default, useful if one of the "opts" global settings
+		-- doesn't work well in a specific filetype
+		per_filetype = {
+			["html"] = {
+				enable_close = false,
+			},
+		},
+	})
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 	-- markdown preview for nvim
 
