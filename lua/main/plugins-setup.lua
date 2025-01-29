@@ -49,24 +49,24 @@ return packer.startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
-
-	use({
-		"nvim-ts-autotag",
-		opts = {
-			-- Defaults
-			enable_close = true, -- Auto close tags
-			enable_rename = true, -- Auto rename pairs of tags
-			enable_close_on_slash = false, -- Auto close on trailing </
-		},
-		-- Also override individual filetype configs, these take priority.
-		-- Empty by default, useful if one of the "opts" global settings
-		-- doesn't work well in a specific filetype
-		per_filetype = {
-			["html"] = {
-				enable_close = false,
-			},
-		},
-	})
+	-- disabling autotag for now...
+	-- use({
+	-- 	"nvim-ts-autotag",
+	-- 	opts = {
+	-- 		-- Defaults
+	-- 		enable_close = true, -- Auto close tags
+	-- 		enable_rename = true, -- Auto rename pairs of tags
+	-- 		enable_close_on_slash = false, -- Auto close on trailing </
+	-- 	},
+	-- 	-- Also override individual filetype configs, these take priority.
+	-- 	-- Empty by default, useful if one of the "opts" global settings
+	-- 	-- doesn't work well in a specific filetype
+	-- 	per_filetype = {
+	-- 		["html"] = {
+	-- 			enable_close = false,
+	-- 		},
+	-- 	},
+	-- })
 	-- commenting with gcc
 	use("numToStr/Comment.nvim")
 	-- file explorer
@@ -142,7 +142,6 @@ return packer.startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use({
 		"smjonas/inc-rename.nvim",
 		config = function()

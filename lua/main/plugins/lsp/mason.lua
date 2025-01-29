@@ -20,7 +20,7 @@ mason.setup()
 -- configure lsp config on autostart
 mason_lspconfig.setup({
 	ensure_installed = {
-		"tsserver",
+		"ts_ls",
 		"html",
 		"cssls",
 		"tailwindcss",
