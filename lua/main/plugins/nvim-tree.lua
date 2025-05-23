@@ -9,8 +9,8 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_show_icons = {
 	folders = 0,
 	files = 0,
-	git = 0,
-	folder_arrows = 0,
+	git = 1,
+	folder_arrows = 1,
 }
 -- configure nvim-tree
 nvimtree.setup({
@@ -24,5 +24,8 @@ nvimtree.setup({
 				enable = false,
 			},
 		},
+	},
+	filters = {
+		dotfiles = true,
 	},
 })
