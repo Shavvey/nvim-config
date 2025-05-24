@@ -13,4 +13,5 @@ end
 mason_lspconfig.setup()
 
 
+vim.lsp.enable('luals')
 
