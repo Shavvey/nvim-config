@@ -22,9 +22,6 @@ This is the general file structure for the nvim config
 │   ├── lazygit.lua
 │   ├── lsp
 │   │   ├── lspconfig.lua
-│   │   ├── lspsaga.lua
-│   │   ├── mason.lua
-│   │   └── null-ls.lua
 │   ├── lualine.lua
 │   ├── nvim-cmp.lua
 │   ├── nvim-tree.lua
