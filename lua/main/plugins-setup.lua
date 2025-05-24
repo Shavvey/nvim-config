@@ -142,10 +142,18 @@ return packer.startup(function(use)
 	})
 	use({
 	    "mason-org/mason.nvim",
-	    config = function()
-		      require("mason").setup()
-	    end,
 	})
+  
+  use({
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
+  })
+
+  use("neovim/nvim-lspconfig")
 	-- treesitter configuration
 	use({
 		"nvim-treesitter/nvim-treesitter",
