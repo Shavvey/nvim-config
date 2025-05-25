@@ -32,4 +32,6 @@ keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic
 keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 -- enable lua lsp, with default config from lsp-config
 vim.lsp.enable('luals')
+vim.lsp.enable('clangd')
+vim.lsp.enable('pyright')
 
