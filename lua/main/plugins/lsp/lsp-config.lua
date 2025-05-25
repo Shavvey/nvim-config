@@ -10,10 +10,6 @@ if not mason_lspconfig_setup then
   return
 end
 
-local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not cmp_nvim_lsp_status then
-	return
-end
 
 -- bridges the gap so that lsp config can find lsp servers managed by mason
 mason_lspconfig.setup()
@@ -35,8 +31,24 @@ keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostic
 keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
 keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
+-- vim.diagnostic.config({
+--  signs = {
+--     text = {
+--       [vim.diagnostic.severity.ERROR] = 'E', -- or other icon of your choice here, this is just what my config has:
+--       [vim.diagnostic.severity.WARN] = 'W',
+--       [vim.diagnostic.severity.INFO] = 'I',
+--       [vim.diagnostic.severity.HINT] = 'H',
+--     },
+--   },
+-- })
+
 -- enable lua lsp, with default config from lsp-config
 vim.lsp.enable('luals')
 vim.lsp.enable('clangd')
 vim.lsp.enable('pyright')
 
+
+vim.lsp.config.luals = {
+  root_markers = { { 'stylua.toml', '.luarc.json' }, '.git' },
+}
