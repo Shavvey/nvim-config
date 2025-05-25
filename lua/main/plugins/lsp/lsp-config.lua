@@ -51,4 +51,12 @@ vim.lsp.enable('pyright')
 
 vim.lsp.config.luals = {
   root_markers = { { 'stylua.toml', '.luarc.json' }, '.git' },
+	-- let lsp know vim is part of global namespace
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
 }
