@@ -10,6 +10,11 @@ if not mason_lspconfig_setup then
   return
 end
 
+local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_nvim_lsp_status then
+	return
+end
+
 -- bridges the gap so that lsp config can find lsp servers managed by mason
 mason_lspconfig.setup()
 

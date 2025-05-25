@@ -143,7 +143,7 @@ return packer.startup(function(use)
 	use({
 	    "mason-org/mason.nvim",
 	})
-  
+
   use({
     "mason-org/mason-lspconfig.nvim",
     opts = {},
