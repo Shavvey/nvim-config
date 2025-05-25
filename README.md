@@ -1,4 +1,4 @@
-# Personal Neonvim Config
+# Personal Neovim Config
 
 Personal neovim configuration that I use right now.
 I lot of this stuff was pinched from another [repository](https://github.com/josean-dev/dev-environment-files),
