@@ -47,6 +47,7 @@ keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is 
 vim.lsp.enable('luals')
 vim.lsp.enable('clangd')
 vim.lsp.enable('pyright')
+vim.lsp.enable('gopls')
 
 
 vim.lsp.config.luals = {

@@ -10,7 +10,8 @@ conform.setup({
 		python = { "black" },
 		rust = { "rustfmt" },
 		javascript = { "prettier" },
-		c = { "clangd-formatter" },
+		c = { "clang-format" },
+		go = { "gofumpt" },
 	},
 	-- sets a special keybind to exec formatter
 	-- using <space>fm
