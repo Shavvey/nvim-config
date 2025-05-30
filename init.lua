@@ -20,3 +20,5 @@ require("main.plugins.toggleterm")
 
 -- adding lsp support
 require("main.plugins.lsp.lsp-config")
+-- formatter support
+require("main.plugins.lsp.conform")

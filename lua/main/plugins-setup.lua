@@ -141,19 +141,19 @@ return packer.startup(function(use)
 		end,
 	})
 	use({
-	    "mason-org/mason.nvim",
+		"mason-org/mason.nvim",
 	})
 
-  use({
-    "mason-org/mason-lspconfig.nvim",
-    opts = {},
-    dependencies = {
-        { "mason-org/mason.nvim", opts = {} },
-        "neovim/nvim-lspconfig",
-    },
-  })
+	use({
+		"mason-org/mason-lspconfig.nvim",
+		opts = {},
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} },
+			"neovim/nvim-lspconfig",
+		},
+	})
 
-  use("neovim/nvim-lspconfig")
+	use("neovim/nvim-lspconfig")
 	-- treesitter configuration
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -178,6 +178,7 @@ return packer.startup(function(use)
 		end,
 	}) -- git integration using lazygit
 	use("kdheepak/lazygit.nvim")
+	use("stevearc/conform.nvim")
 	if packer_bootstrap then
 		require("packer").sync()
 	end
