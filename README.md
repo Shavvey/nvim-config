@@ -9,7 +9,7 @@ so you should probably just check that one out if you like this one
 This is the general file structure for the nvim config
 
 ```
-└── main
+main
 ├── core
 │   ├── colorscheme.lua
 │   ├── keymaps.lua
