@@ -18,11 +18,11 @@ conform.setup({
 		css = { "prettier" },
 		typescript = { "prettier" },
 	},
-	format_on_save = {
-		-- default options for fomrat on save enable
-		timeout_ms = 1000,
-		lsp_format = "fallback",
-	},
+	-- format_on_save = {
+	-- 	-- default options for fomrat on save enable
+	-- 	timeout_ms = 1000,
+	-- 	lsp_format = "fallback",
+	-- },
 	-- sets a special keybind to exec formatter
 	-- using <space>fm
 	vim.keymap.set({ "n", "v" }, "<leader>fm", function()

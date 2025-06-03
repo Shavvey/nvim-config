@@ -1,15 +1,14 @@
 local mason_setup, mason = pcall(require, "mason")
 if not mason_setup then
-  return
+	return
 end
 -- setup mason first
 mason.setup()
 
 local mason_lspconfig_setup, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not mason_lspconfig_setup then
-  return
+	return
 end
-
 
 -- bridges the gap so that lsp config can find lsp servers managed by mason
 mason_lspconfig.setup()
@@ -44,14 +43,13 @@ keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is 
 -- })
 
 -- enable lua lsp, with default config from lsp-config
-vim.lsp.enable('luals')
-vim.lsp.enable('clangd')
-vim.lsp.enable('pyright')
-vim.lsp.enable('gopls')
-
+vim.lsp.enable("luals")
+vim.lsp.enable("clangd")
+vim.lsp.enable("pyright")
+vim.lsp.enable("gopls")
 
 vim.lsp.config.luals = {
-  root_markers = { { 'stylua.toml', '.luarc.json' }, '.git' },
+	root_markers = { { "stylua.toml", ".luarc.json" }, ".git" },
 	-- let lsp know vim is part of global namespace
 	settings = {
 		Lua = {
@@ -61,3 +59,7 @@ vim.lsp.config.luals = {
 		},
 	},
 }
+
+-- vim.lsp.config.clangd = {
+-- 	init_options = { compilationDatabasePath = "./build" },
+-- }
