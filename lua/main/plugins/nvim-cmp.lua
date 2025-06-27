@@ -13,6 +13,9 @@ end
 require("luasnip/loaders/from_vscode").lazy_load()
 vim.opt.completeopt = "menu,menuone,noselect"
 cmp.setup({
+  performance = {
+    max_view_entries = 7,
+  },
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
