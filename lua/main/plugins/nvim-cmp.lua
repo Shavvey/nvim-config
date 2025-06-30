@@ -44,7 +44,6 @@ cmp.setup({
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
 	}),
-
   -- set up lspconfig
-  capabilities = require('cmp_nvim_lsp').default_capabilities()
+  -- capabilities = require('cmp_nvim_lsp').default_capabilities()
 })
