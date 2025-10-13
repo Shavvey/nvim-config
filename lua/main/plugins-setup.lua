@@ -36,10 +36,11 @@ return packer.startup(function(use)
 	-- use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-
+  
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 	-- markdown preview for nvim
-
+	-- CURERNT THEME
+	use({ "ellisonleao/gruvbox.nvim" })
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install",
