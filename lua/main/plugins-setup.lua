@@ -103,7 +103,7 @@ return packer.startup(function(use)
 	-- highlights todos
 
 	-- vs-code like icons
-	use("nvim-tree/nvim-web-devicons")
+	-- use("nvim-tree/nvim-web-devicons")
 	--polyglot syntax highlighting, should probably be disabled when running nvim-treesitter
 	--use("sheerun/vim-polyglot")
 	-- statusline
