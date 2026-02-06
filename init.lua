@@ -16,7 +16,7 @@ require("main.plugins.nvim-cmp")
 require("main.plugins.autopairs")
 require("main.plugins.gitsigns")
 require("main.plugins.treesitter")
-require("main.plugins.toggleterm")
+-- require("main.plugins.toggleterm")
 
 -- adding lsp support
 require("main.plugins.lsp.lsp-config")
