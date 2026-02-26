@@ -36,19 +36,13 @@ return packer.startup(function(use)
 	-- use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-  use('junegunn/vim-easy-align')
+	use("tpope/vim-fugitive") -- add, delete, change surroundings (it's awesome)
+	use("junegunn/vim-easy-align")
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
-	-- markdown preview for nvim
+  -- lets you preview the changes you made 
+	-- use({"OXY2DEV/markview.nvim"})
 	-- CURERNT THEME
 	use({ "ellisonleao/gruvbox.nvim" })
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	})
 	-- disabling autotag for now...
 	-- use({
 	-- 	"nvim-ts-autotag",
@@ -113,16 +107,13 @@ return packer.startup(function(use)
 	-- trying to load the lazgit extension as well as have ensure dependencies (plenary and lazygit)
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
-		config = function()
-			require("telescope").load_extension("lazygit")
-		end,
+		requires = { "nvim-lua/plenary.nvim" }
 	}) -- fuzzy finder
 	use({ "nvim-telescope/telescope-ui-select.nvim" }) -- for showing lsp code actions
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
-  use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
 
@@ -178,8 +169,7 @@ return packer.startup(function(use)
 	-- 		require("toggleterm").setup()
 	-- 	end,
 	-- })
-  -- git integration using lazygit
-	use("kdheepak/lazygit.nvim")
+	-- git integration using lazygit
 	use("stevearc/conform.nvim")
 	if packer_bootstrap then
 		require("packer").sync()

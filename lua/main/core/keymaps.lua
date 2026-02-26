@@ -61,7 +61,7 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 -- toggle term keymap
 -- keymap.set("n", "<leader>nt", ":ToggleTerm<CR>")
 -- lazy git launch, silent call
-keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true })
+-- keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true })
 -- move lines while inside normal mode
 keymap.set("n", "<A-j>", ":m .+1<CR>==")
 keymap.set("n", "<A-k>", ":m .-2<CR>==")
