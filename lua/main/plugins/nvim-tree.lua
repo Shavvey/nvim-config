@@ -7,25 +7,21 @@ vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.g.nvim_tree_show_icons = {
-	folders = 0,
+	folders = 1,
 	files = 0,
 	git = 1,
 	folder_arrows = 1,
 }
--- configure nvim-tree
-nvimtree.setup({
 
-	git = {
-		enable = true,
-	},
-	actions = {
-		open_file = {
-			window_picker = {
-				enable = false,
+local config = {
+	renderer = {
+		icons = {
+			show = {
+				folder = false,
+				folder_arrow = true,
 			},
 		},
 	},
-	filters = {
-		dotfiles = true,
-	},
-})
+}
+-- configure nvim-tree
+nvimtree.setup(config)
